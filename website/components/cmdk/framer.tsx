@@ -5,10 +5,10 @@ export function FramerCMDK() {
   const [value, setValue] = React.useState('button')
   return (
     <div className="framer">
-      <Command value={value} onValueChange={(v) => setValue(v)}>
+      <Command value={value} onValueChange={(v) => setValue(v)} asChild>
         <div cmdk-framer-header="">
           <SearchIcon />
-          <Command.Input autoFocus placeholder="Find components, packages, and interactions..." />
+          <Command.Input asChild autoFocus placeholder="Find components, packages, and interactions..." />
         </div>
         <Command.List>
           <div cmdk-framer-items="">
